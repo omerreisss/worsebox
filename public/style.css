@@ -1,0 +1,116 @@
+/* Genel stil */
+body {
+    background-color: #f4f7fc;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Ana kapsayıcı */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* Başlık ve İçerik */
+h1, h2 {
+    color: #333;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* Kart düzeni (Post'lar için) */
+.posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Her bir post için kart */
+.post {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Başlık stil */
+.post h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.post h3:hover {
+    color: #3498db;  /* Başlık hover rengi */
+    cursor: pointer;
+}
+
+/* İçerik kısmı */
+.post p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Görsel yüklemeler */
+.post img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Yeni post ekleme butonu */
+a.add-post {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+a.add-post:hover {
+    background-color: #2980b9;
+}
+
+/* Mobil uyum */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .post {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .post h3 {
+        font-size: 1.6rem;
+    }
+}

@@ -1,0 +1,19 @@
+<%- include('layout') %>
+
+<h1>Worsebox - Ana Sayfa</h1>
+
+<div class="posts">
+    <% posts.forEach(post => { %>
+        <div class="post">
+            <h3><a href="/post/<%= post.id %>"><%= post.title %></a></h3>
+            <p><%= post.content.substring(0, 150) %>...</p>
+            <% if (post.image) { %>
+                <img src="/uploads/<%= post.image %>" alt="Post Görseli">
+            <% } %>
+        </div>
+    <% }) %>
+</div>
+
+<a href="/new" class="add-post">Yeni Post Oluştur</a>
+
+<%- include('footer') %>
